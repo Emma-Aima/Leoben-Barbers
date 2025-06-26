@@ -173,37 +173,40 @@ section {
 
 /* Home Section */
 .home-section {
-    padding-top: 120px;
-    background: linear-gradient(rgba(26,26,26,0.7), rgba(0,0,0,0.7)), url('LBS Dark.png') no-repeat center center/cover;
+    padding: 100px 0;
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('LBS Dark.png') no-repeat center center/cover;
+    background-color: #0a0a0a; /* Fallback */
+    color: #fff;
     min-height: 100vh;
     display: flex;
     align-items: center;
-}
-
-.home-section {
-    padding: 100px 0;
-    background: #0a0a0a;
-    color: #fff;
     position: relative;
     overflow: hidden;
 }
 
 .home-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .home-content {
-    flex: 1;
+    width: 100%;
     max-width: 600px;
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 .home-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 700;
@@ -218,9 +221,46 @@ section {
     line-height: 1.6;
     margin-bottom: 30px;
     color: #e0e0e0;
-    max-width: 90%;
+    max-width: 100%;
 }
 
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .home-section .container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    
+    .home-content {
+        text-align: left;
+    }
+    
+    .home-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .home-content h1 {
+        font-size: 2rem;
+    }
+    
+    .home-content p {
+        font-size: 1rem;
+    }
+}
 /* About Section */
 .about-section {
     background-color: var(--light-gray);
