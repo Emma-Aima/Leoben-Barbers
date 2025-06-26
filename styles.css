@@ -175,7 +175,8 @@ section {
 .home-section {
     padding: 100px 0;
     background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('LBS Dark.png') no-repeat center center/cover;
+                url('https://media.istockphoto.com/id/1247981150/photo/usual-day-at-barbershop-two-barbers-working-with-clients-in-the-modern-barbershop.jpg?s=612x612&w=0&k=20&c=6SSz70wIo4euk_kNwGeVT1U5KTUhovZCDdwd6rwmnmw=') 
+                no-repeat center center/cover;
     background-color: #0a0a0a; /* Fallback */
     color: #fff;
     min-height: 100vh;
@@ -213,6 +214,7 @@ section {
     letter-spacing: -0.5px;
     background: linear-gradient(90deg, #ffffff, #c9c9c9);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
